@@ -160,6 +160,9 @@ export default function Header() {
         <ListItem button component={Link} to='/dashboard'>
           <ListItemText primary='Dashboard' />
         </ListItem>
+        <ListItem button component={Link} to='/maps'>
+          <ListItemText primary='Maps' />
+        </ListItem>
       </List>
       <Divider />
       <List>
