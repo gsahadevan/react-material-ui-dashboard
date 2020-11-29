@@ -76,6 +76,7 @@ class HeatMap extends Component {
               series={this.state.series}
               type='heatmap'
               height='350'
+              width='500'
             />
           </div>
         </div>

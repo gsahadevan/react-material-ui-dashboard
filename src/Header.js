@@ -23,6 +23,8 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import { Link } from 'react-router-dom';
+import { ExpandLess, ExpandMore } from '@material-ui/icons';
+import { Collapse } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -92,6 +94,9 @@ const useStyles = makeStyles((theme) => ({
   fullList: {
     width: 'auto',
   },
+  nested: {
+    paddingLeft: theme.spacing(4),
+  },
 }));
 
 export default function Header() {
@@ -147,6 +152,13 @@ export default function Header() {
     setMobileMoreAnchorEl(event.currentTarget);
   };
 
+  const [apexChartsOpen, setApexChartsOpen] = React.useState(false);
+
+  const handleClick = () => (event) => {
+    setApexChartsOpen(!apexChartsOpen);
+    event.stopPropagation();
+  };
+
   const list = (anchor) => (
     <div
       className={clsx(classes.list, {
@@ -157,15 +169,30 @@ export default function Header() {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        <ListItem button component={Link} to='/dashboard'>
-          <ListItemText primary='Dashboard' />
+        <ListItem button onClick={handleClick()}>
+          <ListItemText primary='Apex Charts' />
+          {apexChartsOpen ? <ExpandLess /> : <ExpandMore />}
         </ListItem>
-        <ListItem button component={Link} to='/heatmaps'>
-          <ListItemText primary='Heat Maps' />
-        </ListItem>
-        <ListItem button component={Link} to='/maps'>
-          <ListItemText primary='Maps' />
-        </ListItem>
+        <Collapse in={apexChartsOpen} timeout='auto' unmountOnExit>
+          <List component='div' disablePadding>
+            <ListItem
+              button
+              className={classes.nested}
+              component={Link}
+              to='/basicbar'
+            >
+              <ListItemText primary='Basic Bar' />
+            </ListItem>
+            <ListItem
+              button
+              className={classes.nested}
+              component={Link}
+              to='/heatmaps'
+            >
+              <ListItemText primary='Heat Maps' />
+            </ListItem>
+          </List>
+        </Collapse>
       </List>
       <Divider />
       <List>
