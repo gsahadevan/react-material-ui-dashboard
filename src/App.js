@@ -1,29 +1,24 @@
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import Header from './Header';
-import Nav from './Nav';
-import Career from './Career';
-import About from './About';
-
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Dashboard from './views/Dashboard';
+import HeatMap from './views/Maps/heatmap';
+import Maps from './views/Maps';
 
 function App() {
   return (
     <Router>
       <div className='App'>
         <Header />
-        <Nav />
         <Switch>
-          <Route path='/' exact component={Home} />
-          <Route path='/about' component={About} />
-          <Route path='/career' component={Career} />
+          <Route exact path='/' component={Dashboard} />
+          <Route path='/dashboard' component={Dashboard} />
+          <Route path='/heatmaps' component={HeatMap} />
+          <Route path='/maps' component={Maps} />
         </Switch>
       </div>
     </Router>
   );
 }
-
-const Home = () => {
-  return <div>Home page </div>;
-};
 
 export default App;
