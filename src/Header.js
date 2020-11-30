@@ -19,9 +19,7 @@ import clsx from 'clsx';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
 import { Link } from 'react-router-dom';
 import { ExpandLess, ExpandMore } from '@material-ui/icons';
 import { Collapse } from '@material-ui/core';
@@ -169,6 +167,12 @@ export default function Header() {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
+        <ListItem button component={Link} to='/dashboard'>
+          <ListItemText primary='Dashboard' />
+        </ListItem>
+      </List>
+      <Divider />
+      <List>
         <ListItem button onClick={handleClick()}>
           <ListItemText primary='Apex Charts' />
           {apexChartsOpen ? <ExpandLess /> : <ExpandMore />}
@@ -195,27 +199,6 @@ export default function Header() {
         </Collapse>
       </List>
       <Divider />
-      <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-            </ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
-      <Divider />
-      <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-            </ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
     </div>
   );
 
