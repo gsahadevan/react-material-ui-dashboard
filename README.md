@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# react-material-ui-dashboard
+
+Click here for a [demo](https://gsahadevan.github.io/react-material-ui-dashboard/).
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
