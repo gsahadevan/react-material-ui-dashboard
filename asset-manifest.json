@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/react-material-ui-dashboard/static/css/main.ea1455b2.chunk.css",
-    "main.js": "/react-material-ui-dashboard/static/js/main.a08b84df.chunk.js",
-    "main.js.map": "/react-material-ui-dashboard/static/js/main.a08b84df.chunk.js.map",
+    "main.js": "/react-material-ui-dashboard/static/js/main.3fe12d3f.chunk.js",
+    "main.js.map": "/react-material-ui-dashboard/static/js/main.3fe12d3f.chunk.js.map",
     "runtime-main.js": "/react-material-ui-dashboard/static/js/runtime-main.06429a5d.js",
     "runtime-main.js.map": "/react-material-ui-dashboard/static/js/runtime-main.06429a5d.js.map",
-    "static/js/2.0520706d.chunk.js": "/react-material-ui-dashboard/static/js/2.0520706d.chunk.js",
-    "static/js/2.0520706d.chunk.js.map": "/react-material-ui-dashboard/static/js/2.0520706d.chunk.js.map",
+    "static/js/2.980a947a.chunk.js": "/react-material-ui-dashboard/static/js/2.980a947a.chunk.js",
+    "static/js/2.980a947a.chunk.js.map": "/react-material-ui-dashboard/static/js/2.980a947a.chunk.js.map",
     "index.html": "/react-material-ui-dashboard/index.html",
     "static/css/main.ea1455b2.chunk.css.map": "/react-material-ui-dashboard/static/css/main.ea1455b2.chunk.css.map",
-    "static/js/2.0520706d.chunk.js.LICENSE.txt": "/react-material-ui-dashboard/static/js/2.0520706d.chunk.js.LICENSE.txt"
+    "static/js/2.980a947a.chunk.js.LICENSE.txt": "/react-material-ui-dashboard/static/js/2.980a947a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.06429a5d.js",
-    "static/js/2.0520706d.chunk.js",
+    "static/js/2.980a947a.chunk.js",
     "static/css/main.ea1455b2.chunk.css",
-    "static/js/main.a08b84df.chunk.js"
+    "static/js/main.3fe12d3f.chunk.js"
   ]
 }
