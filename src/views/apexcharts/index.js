@@ -1,5 +1,4 @@
 import React from 'react';
-import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
@@ -7,8 +6,9 @@ import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Link from '@material-ui/core/Link';
-import BasicBar from '../Maps/basicbar';
-import HeatMap from '../Maps/heatmap';
+import BasicBar from './basicbar';
+import HeatMap from './heatmap';
+import Bubble from './bubble';
 
 function Copyright() {
   return (
@@ -113,17 +113,19 @@ export default function Dashboard() {
         <div className={classes.appBarSpacer} />
         <Container maxWidth='lg' className={classes.container}>
           <Grid container spacing={3}>
-            {/* Chart */}
-            <Grid item xs={12} md={6} lg={6}>
+            <Grid item xs={12} md={4} lg={4}>
               <Paper className={classes.paper}>
                 <BasicBar />
               </Paper>
             </Grid>
-            {/* Recent Deposits */}
-            {/* Recent Orders */}
             <Grid item xs={12} md={12} lg={12}>
               <Paper className={classes.paper}>
                 <HeatMap />
+              </Paper>
+            </Grid>
+            <Grid item xs={12} md={12} lg={12}>
+              <Paper className={classes.paper}>
+                <Bubble />
               </Paper>
             </Grid>
           </Grid>

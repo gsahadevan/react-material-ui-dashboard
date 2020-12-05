@@ -167,8 +167,8 @@ export default function Header() {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        <ListItem button component={Link} to='/dashboard'>
-          <ListItemText primary='Dashboard' />
+        <ListItem button component={Link} to='/apexcharts'>
+          <ListItemText primary='Apex Charts' />
         </ListItem>
       </List>
       <Divider />
@@ -194,6 +194,14 @@ export default function Header() {
               to='/heatmaps'
             >
               <ListItemText primary='Heat Maps' />
+            </ListItem>
+            <ListItem
+              button
+              className={classes.nested}
+              component={Link}
+              to='/bubble'
+            >
+              <ListItemText primary='Bubble Chart' />
             </ListItem>
           </List>
         </Collapse>

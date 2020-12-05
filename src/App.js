@@ -1,9 +1,10 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import Header from './Header';
-import Dashboard from './views/Dashboard';
-import BasicBar from './views/Maps/basicbar';
-import HeatMap from './views/Maps/heatmap';
+import ApexCharts from './views/apexcharts';
+import BasicBar from './views/apexcharts/basicbar';
+import HeatMap from './views/apexcharts/heatmap';
+import Bubble from './views/apexcharts/bubble';
 
 function App() {
   return (
@@ -11,9 +12,10 @@ function App() {
       <div className='App'>
         <Header />
         <Switch>
-          <Route path='/dashboard' component={Dashboard} />
+          <Route path='/apexcharts' component={ApexCharts} />
           <Route path='/basicbar' component={BasicBar} />
           <Route path='/heatmaps' component={HeatMap} />
+          <Route path='/bubble' component={Bubble} />
         </Switch>
       </div>
     </Router>
